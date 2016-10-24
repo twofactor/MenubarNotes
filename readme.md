@@ -1,7 +1,10 @@
-# example menubar app
+# Menubar Notes
 
-## instructions
+## What is it
 
-- run `npm install`
-- run `npm run build` to make Example.app
-- run `npm start` to run app from CLI without building Example.app
+A small mac menubar app that acts like a sticky note
+
+## Things Used
+
+- ['Quill.js'](http://quilljs.com/)
+- ['Electron Menubar'](https://github.com/codeisvek/MenubarNotes)
