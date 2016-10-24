@@ -78,6 +78,11 @@ describe('get-package-info', () => {
                     'devDependencies.some-dev-dependency': '~1.2.3'
                 });
 
+                // Test source prop points to the prop the value came from
+                expect(result.source['productName'].prop).to.equal('productName');
+                expect(result.source['name'].prop).to.equal('productName');
+                expect(result.source['version'].prop).to.equal('version');
+
                 Promise.all(
                     Object.keys(result.source).map(
                         (prop) => testSource(prop, result.source[prop])

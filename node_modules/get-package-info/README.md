@@ -24,9 +24,9 @@ The initial directory to search in. `getPackageInfo(props, dir)` will look for a
 ```js
 var getPackageInfo = require('get-package-info');
 
-getPackageInfo(['name', 'dependencies.lodash'], '/path/to/dir')
+getPackageInfo([['productName', 'name'], 'dependencies.lodash'], '/path/to/dir')
 .then((result) => {
-    console.log(result); 
+    console.log(result);
 });
 ```
 
@@ -39,13 +39,20 @@ Possible output, depending on the directory structure and package.json contents:
         'dependencies.lodash': '~3.0.0'
     },
     source: {
+        productName: {
+            src: '/path/to/dir/package.json',
+            pkg: { ... }, // the parsed package.json this property came from
+            prop: 'productName'
+        },
         name: {
             src: '/path/to/dir/package.json',
-            pkg: { ... } // the parsed package.json this property came from
+            pkg: { ... }, // the parsed package.json this property came from
+            prop: 'productName' // name uses productName's value because productName has priority
         },
         'dependencies.lodash': {
             src: '/path/to/package.json', // This property was found in a higher directory
-            pkg: { ... }
+            pkg: { ... },
+            prop: 'dependencies.lodash'
         }
     }
 }

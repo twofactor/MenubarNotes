@@ -1,0 +1,48 @@
+.ql-mentions {
+  box-shadow: -1px -1px 2px #ddd, 1px  1px 2px #ddd;
+  display: none;
+}
+.ql-mentions ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.ql-mentions ul li {
+  background: #fff;
+  border-bottom: solid thin #ddd;
+  cursor: pointer;
+  padding: 8px 12px;
+  -webkit-transform: translateZ(1px);
+  transform: translateZ(1px);
+}
+.ql-mentions ul li.ql-mention-choice-selected, .ql-mentions ul li:hover {
+  background: #888;
+  color: white;
+}
+.ql-mentions ul li:last-child {
+  border-bottom: none;
+}
+.ql-is-mentioning.ql-mentions {
+  display: table;
+}
+
+.ql-mentions {
+  border: solid 1px #ddd;
+  font-size: 13px;
+  padding: 0;
+}
+
+.ql-mention-no-match {
+  background: #fff;
+  box-shadow: -1px -1px 1px #bbb, 1px  1px 1px #bbb, -1px  1px 1px #bbb, 1px -1px 1px #bbb;
+  padding: 8px 12px 8px 8px;
+  pointer-events: none;
+  -webkit-transform: translateZ(1px);
+  transform: translateZ(1px);
+}
+.ql-mention-no-match i {
+  border-left: solid 2px #DF928E;
+  padding-left: 6px;
+}
+
+/*# sourceMappingURL=quill-mentions.css.map */
