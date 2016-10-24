@@ -1,0 +1,1 @@
+global.QuillMentions = require("./mentions");
